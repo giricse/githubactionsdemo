@@ -1,0 +1,12 @@
+name: "First github actions job"
+on: push
+jobs:
+    firstjob:
+        runs-on: ubuntu-latest
+        steps:
+        - name: "Welcome message"
+          run: echo "Hello, welcome to first job"
+        - name: Checkout repo
+          uses: actions/checkout@v4
+        - name: List all files in the repo
+          run: ls -lart
