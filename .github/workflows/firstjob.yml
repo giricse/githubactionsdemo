@@ -1,5 +1,5 @@
 name: "First github actions job"
-on: push
+on: workflow_dispatch
 jobs:
     firstjob:
         runs-on: ubuntu-latest
