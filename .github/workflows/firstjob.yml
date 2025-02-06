@@ -9,4 +9,6 @@ jobs:
         - name: Checkout repo
           uses: actions/checkout@v4
         - name: List all files in the repo
-          run: ls -lart
+          run: |
+               ls -lart
+               cat README.md
