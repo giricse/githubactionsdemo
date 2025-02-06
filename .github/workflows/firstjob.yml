@@ -2,7 +2,10 @@ name: "First github actions job"
 on: workflow_dispatch
 jobs:
     firstjob:
-        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                os: ["ubuntu-latest","windows-latest"]
+        runs-on: ${{ matrix.os }}
         steps:
         - name: "Welcome message"
           run: echo "Hello, welcome to first job"
