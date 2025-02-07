@@ -4,6 +4,9 @@ on:
     types:
       - opened
 jobs:
+  dockerrun:
+    runs-on: ubuntu-latest
+    
   automerge:
     runs-on: ubuntu-latest
     permissions:
@@ -15,3 +18,4 @@ jobs:
          env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           MERGE_LABELS: ""
+  
